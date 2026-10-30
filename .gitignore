@@ -1,0 +1,16 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Dependencies and build output (the site has none, keep it that way)
+node_modules/
+dist/
+
+# Local tooling
+.hallmark/
+*.log
+*.zip
+.env
