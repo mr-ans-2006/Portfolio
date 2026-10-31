@@ -1,13 +1,13 @@
 These fonts are bundled with this site as web subsets (woff2) and are used under the SIL Open Font License, Version 1.1:
 
-- fonts/pixelify.woff2: Pixelify Sans
-  Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)
-- fonts/caveat.woff2: Caveat
-  Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
-- fonts/jbmono.woff2: JetBrains Mono
-  Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+- fonts/rozha.woff2: Rozha One
+  Copyright (c) 2014, Indian Type Foundry (info@indiantypefoundry.com)
+- fonts/hanken.woff2: Hanken Grotesk
+  Copyright 2021 The Hanken Grotesk Project Authors (https://github.com/marcologous/hanken-grotesk)
 - fonts/naskh.woff2: Noto Naskh Arabic
   Copyright 2022 The Noto Project Authors (https://github.com/notofonts/arabic)
+- fonts/jbmono.woff2: JetBrains Mono
+  Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
 
 The files were subset with fontTools for this site. None of these fonts declares a Reserved Font Name, and the site refers to them under its own short family names.
 
