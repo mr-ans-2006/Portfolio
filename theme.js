@@ -1,6 +1,5 @@
 // Runs before first paint: apply the saved theme, else follow the system.
 (function () {
-  document.documentElement.classList.add("js");
   try {
     var t = localStorage.getItem("theme");
     if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);

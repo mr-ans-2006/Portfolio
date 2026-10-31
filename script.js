@@ -41,4 +41,43 @@
   } else {
     items.forEach(function (el) { el.classList.add("in"); });
   }
+
+  // Type out the whoami answer once.
+  var typed = document.querySelector(".typed");
+  if (typed && !reduce) {
+    var full = typed.textContent;
+    typed.setAttribute("aria-label", full);
+    typed.textContent = "";
+    var i = 0;
+    setTimeout(function step() {
+      typed.textContent = full.slice(0, ++i);
+      if (i < full.length) setTimeout(step, 36);
+    }, 800);
+  }
+
+  // The typing-test keyboard types "سنڌي ٻولي" on a loop while it is on screen.
+  var kbd = document.querySelector(".kbd");
+  if (kbd && !reduce) {
+    var out = kbd.querySelector(".kbd-typed");
+    var word = ["س", "ن", "ڌ", "ي", " ", "ٻ", "و", "ل", "ي"];
+    var keys = {};
+    kbd.querySelectorAll(".kbd-row span").forEach(function (k) { keys[k.textContent] = k; });
+    var n = 0, timer = null;
+    function tick() {
+      if (n >= word.length) { n = 0; out.textContent = ""; timer = setTimeout(tick, 900); return; }
+      var ch = word[n++];
+      out.textContent += ch;
+      var k = keys[ch];
+      if (k) { k.classList.add("hit"); setTimeout(function () { k.classList.remove("hit"); }, 170); }
+      timer = setTimeout(tick, n >= word.length ? 1800 : 280);
+    }
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting && !timer) tick();
+          else if (!e.isIntersecting && timer) { clearTimeout(timer); timer = null; }
+        });
+      }).observe(kbd);
+    } else { tick(); }
+  }
 })();

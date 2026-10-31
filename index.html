@@ -45,13 +45,14 @@
   <div class="hero-top">
     <div class="hero-intro">
       <p class="sticky sticky--yellow hero-note"><span lang="sd" dir="rtl">سلام!</span> <small>hi there</small></p>
-      <p class="hand hero-from"><span class="nw">Islamkot, Tharparkar</span> <span class="nw">to Karachi</span></p>
+      <p class="hand hero-from"><span class="nw">Islamkot, Tharparkar</span> <span class="nw"><span class="arr" aria-hidden="true">→</span> Karachi</span></p>
+      <p class="label">hello, i'm</p>
     </div>
 
     <!--
       PHOTO. To change it, replace ali.jpg (next to index.html) with a new picture
       of the same name; a portrait about 600 x 730 px works best. CSS crops to fit.
-      With no photo at all, swap the image element for:
+      With no photo at all, swap the <img> for:
         <div class="photo-mono" role="img" aria-label="Ali Nawaz, initials">AN<span lang="sd" dir="rtl">علي</span></div>
     -->
     <figure class="photo">
@@ -67,9 +68,14 @@
 
   <p class="hero-pitch">CS student at SMIU. I like knowing how things work all the way down: languages, interpreters, networks, and the ways they break. So I wrote a programming language in my own language, Sindhi.</p>
 
+  <div class="terminal-line">
+    <span class="prompt">ali@karachi:~$</span> whoami
+    <span class="out"><span class="typed">CS student. Interested in security and systems.</span><span class="caret" aria-hidden="true"></span></span>
+  </div>
+
   <div class="hero-cta">
-    <a class="btn btn--ink" href="#work">See what I’ve built</a>
-    <a class="text-link" href="https://github.com/mr-ans-2006" rel="noopener" target="_blank">GitHub</a>
+    <a class="btn btn--ink" href="#work">see what I've built <span aria-hidden="true">↓</span></a>
+    <a class="btn btn--paper" href="https://github.com/mr-ans-2006" rel="noopener" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
@@ -77,45 +83,54 @@
 
 <!-- ============ ABOUT ============ -->
 <section class="about" id="about" aria-labelledby="about-h">
-  <h2 id="about-h" class="section-h">About</h2>
+  <h2 id="about-h" class="sticky sticky--pink section-tag">about</h2>
 
   <div class="about-grid">
     <figure class="postcard reveal">
       <span class="washi" aria-hidden="true"></span>
       <svg class="route" viewBox="0 0 320 220" role="img" aria-labelledby="route-t">
         <title id="route-t">A hand-drawn route from Islamkot in Tharparkar to Karachi</title>
-        <rect class="map-bg" x="0" y="0" width="320" height="220"/>
-        <path class="map-dune1" d="M0 160 Q40 140 80 150 T160 140 T240 150 T320 135 V220 H0Z"/>
-        <path class="map-dune2" d="M0 185 Q50 170 100 182 T200 176 T320 170 V220 H0Z"/>
-        <path class="map-bird" d="M18 120 Q30 100 46 112 Q56 88 74 104" fill="none" stroke-width="2" stroke-dasharray="3 5" opacity=".45"/>
-        <circle class="map-sun" cx="262" cy="58" r="16"/>
-        <path class="route-path" d="M266 168 C 220 120, 170 175, 130 120 S 70 70, 58 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
-        <circle class="map-from" cx="266" cy="168" r="7"/>
-        <circle class="map-to" cx="58" cy="64" r="7"/>
+        <rect x="0" y="0" width="320" height="220" fill="#efe9dc"/>
+        <path d="M0 160 Q40 140 80 150 T160 140 T240 150 T320 135 V220 H0Z" fill="#e2dbcb"/>
+        <path d="M0 185 Q50 170 100 182 T200 176 T320 170 V220 H0Z" fill="#d4ccba"/>
+        <path d="M18 120 Q30 100 46 112 Q56 88 74 104" fill="none" stroke="#1a1815" stroke-width="2" stroke-dasharray="3 5" opacity=".45"/>
+        <circle cx="262" cy="58" r="16" fill="#cfc6b3"/>
+        <path class="route-path" d="M266 168 C 220 120, 170 175, 130 120 S 70 70, 58 64" fill="none" stroke="#c8323b" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        <circle cx="266" cy="168" r="7" fill="#1a1815"/>
+        <circle cx="58" cy="64" r="7" fill="#c8323b"/>
         <text x="236" y="198" class="map-label">Islamkot</text>
         <text x="30" y="96" class="map-label">Karachi</text>
       </svg>
-      <figcaption class="hand">from the Thar desert to the big city</figcaption>
+      <figcaption class="hand">the Thar desert → the big city</figcaption>
     </figure>
 
     <div class="about-text reveal">
-      <p class="lead">I’m from <mark class="hl hl--yellow">Islamkot, Tharparkar</mark>, and I study <mark class="hl hl--pink">Computer Science at SMIU</mark> in Karachi.</p>
-      <p>I build things to understand how they work underneath, which is how I ended up writing a programming language from the lexer up. Right now I’m in Cisco networking labs.</p>
+      <p class="lead">I'm from <mark class="hl hl--yellow">Islamkot, Tharparkar</mark>, and I study <mark class="hl hl--pink">Computer Science at SMIU</mark> in Karachi.</p>
+      <p>I build things to understand how they work underneath, which is how I ended up writing a programming language from the lexer up. Right now I'm in Cisco networking labs.</p>
+
+      <ul class="facts">
+        <li class="fact fact--a"><span class="fact-k">from</span><span class="fact-v">Islamkot, Tharparkar</span></li>
+        <li class="fact fact--b"><span class="fact-k">now</span><span class="fact-v">Karachi</span></li>
+        <li class="fact fact--c"><span class="fact-k">studying</span><span class="fact-v">CS @ SMIU</span></li>
+        <li class="fact fact--d"><span class="fact-k">into</span><span class="fact-v">security + systems</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ============ WORK ============ -->
 <section class="work" id="work" aria-labelledby="work-h">
-  <h2 class="section-h section-h--center" id="work-h">The work</h2>
+  <p class="label label--center">things I've built</p>
+  <h2 class="outline" id="work-h">THE WORK</h2>
   <p class="sub">Two real projects, both for Sindhi.</p>
 
   <!-- Project 1 -->
   <article class="folder folder--indigo reveal" aria-labelledby="p1-h">
+    <div class="folder-tab"><span>01</span><span>Python</span></div>
     <div class="folder-body">
       <div class="folder-head">
         <h3 id="p1-h">SindhiScript <span class="sd" lang="sd" dir="rtl">سنڌي</span></h3>
-        <p class="pitch">A programming language written in Sindhi. It isn’t a find-and-replace over Python: it has its own lexer, a hand-written recursive-descent parser and a tree-walking evaluator, and every keyword, operator and built-in is a Sindhi word.</p>
+        <p class="pitch">A programming language written in Sindhi. It isn't a find-and-replace over Python: it has its own lexer, a hand-written recursive-descent parser and a tree-walking evaluator, and every keyword, operator and built-in is a Sindhi word.</p>
       </div>
 
       <ol class="pipeline" aria-label="How the interpreter is built">
@@ -136,19 +151,16 @@
 
       <div class="folder-foot">
         <ul class="chips" aria-label="Tech"><li>Python</li><li>Interpreter</li><li>RTL</li><li>MIT</li></ul>
-        <div class="folder-links">
-          <a class="btn btn--paper btn--sm" href="https://mr-ans-2006.github.io/SindhiScript/" rel="noopener" target="_blank">Try it live</a>
-          <a class="text-link text-link--on-dark" href="https://github.com/mr-ans-2006/SindhiScript" rel="noopener" target="_blank">Source on GitHub</a>
-        </div>
+        <a class="btn btn--paper btn--sm" href="https://github.com/mr-ans-2006/SindhiScript" rel="noopener" target="_blank">Source on GitHub <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </article>
 
   <!-- Code snippet -->
   <div class="code-wrap reveal" id="code">
-    <p class="hand code-note">real code, real output</p>
-    <p class="code-file"><bdi lang="sd" dir="rtl">فيڪٽوريل.سن</bdi></p>
-    <figure class="code-card" aria-labelledby="code-cap">
+    <p class="hand code-note">real code, real output <span aria-hidden="true">↓</span></p>
+    <figure class="window" aria-labelledby="code-cap">
+      <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span lang="sd" dir="rtl">فيڪٽوريل.سن</span></div>
 <pre class="code" lang="sd" dir="rtl"><code><span class="k">ڪم</span> <span class="f">فيڪٽوريل</span>(ن):
     <span class="k">جيڪڏهن</span> ن <span class="o">گهٽ_برابر</span> <span class="n">1</span>:
         <span class="k">موٽايو</span> <span class="n">1</span>
@@ -156,42 +168,45 @@
 
 <span class="k">هر</span> ع <span class="k">۾</span> <span class="b">حد</span>(<span class="n">1</span>، <span class="n">6</span>):
     <span class="b">ڇاپ</span>(<span class="f">فيڪٽوريل</span>(ع))</code></pre>
-      <div class="code-out">
-<pre dir="ltr"><span class="prompt">$</span> python -m <bdi lang="sd">سنڌي</bdi> <bdi lang="sd">فيڪٽوريل.سن</bdi>
+      <div class="window-out">
+<pre><span class="prompt">$</span> python -m <span lang="sd">سنڌي</span>&#x200E; <span lang="sd">فيڪٽوريل.سن</span>&#x200E;
 1
 2
 6
 24
 120</pre>
       </div>
-      <figcaption id="code-cap" class="sr-only">A SindhiScript program that defines a recursive factorial function and prints the factorials of 1 to 5 (1, 2, 6, 24, 120), followed by the interpreter’s real output.</figcaption>
+      <figcaption id="code-cap" class="sr-only">A SindhiScript program that defines a recursive factorial function and prints the factorials of 1 to 5 (1, 2, 6, 24, 120), followed by the interpreter's real output.</figcaption>
     </figure>
     <dl class="legend" aria-label="Keyword legend">
-      <div><dt lang="sd" dir="rtl">ڪم</dt><dd><code>def</code></dd></div>
-      <div><dt lang="sd" dir="rtl">جيڪڏهن</dt><dd><code>if</code></dd></div>
-      <div><dt lang="sd" dir="rtl">موٽايو</dt><dd><code>return</code></dd></div>
-      <div><dt lang="sd" dir="rtl">هر … ۾</dt><dd><code>for … in</code></dd></div>
-      <div><dt lang="sd" dir="rtl">حد</dt><dd><code>range</code></dd></div>
-      <div><dt lang="sd" dir="rtl">ڇاپ</dt><dd><code>print</code></dd></div>
+      <div><dt lang="sd" dir="rtl">ڪم</dt><dd>def</dd></div>
+      <div><dt lang="sd" dir="rtl">جيڪڏهن</dt><dd>if</dd></div>
+      <div><dt lang="sd" dir="rtl">موٽايو</dt><dd>return</dd></div>
+      <div><dt lang="sd" dir="rtl">هر … ۾</dt><dd>for … in</dd></div>
+      <div><dt lang="sd" dir="rtl">حد</dt><dd>range</dd></div>
+      <div><dt lang="sd" dir="rtl">ڇاپ</dt><dd>print</dd></div>
     </dl>
   </div>
 
   <!-- Project 2 -->
   <article class="folder folder--red reveal" aria-labelledby="p2-h">
+    <div class="folder-tab"><span>02</span><span>JavaScript</span></div>
     <div class="folder-body">
       <div class="folder-head">
         <h3 id="p2-h">Sindhi Typing Master <span class="sd" lang="sd" dir="rtl">ٽائپ ماسٽر</span></h3>
         <p class="pitch">A MonkeyType-style typing test for Sindhi. It pulls a random article from Sindhi Wikipedia, cleans it into sentences and times you on it, then shows your speed over time and a heatmap of the letters you keep missing.</p>
       </div>
 
-      <figure class="shot">
-        <img src="typing-master.jpg" alt="Sindhi Typing Master running: a Sindhi Wikipedia sentence ready to type, live mistakes, time, accuracy, CPM and WPM counters, and the on-screen Sindhi keyboard" width="1000" height="821" decoding="async">
-        <figcaption>The app running, with a real sentence from Sindhi Wikipedia.</figcaption>
-      </figure>
+      <div class="kbd" aria-hidden="true">
+        <div class="kbd-screen" lang="sd" dir="rtl"><span class="kbd-typed"></span><span class="caret"></span></div>
+        <div class="kbd-row"><span>ا</span><span>ب</span><span>ٻ</span><span>ڀ</span><span>ت</span><span>ٿ</span><span>ٽ</span><span>ٺ</span></div>
+        <div class="kbd-row"><span>س</span><span>ن</span><span>ڌ</span><span>ي</span><span>ڪ</span><span>ڳ</span><span>ڻ</span><span>ڃ</span></div>
+        <div class="kbd-row"><span>ج</span><span>ڄ</span><span>ڍ</span><span>ڊ</span><span>و</span><span>ل</span><span>ڙ</span><span>ء</span></div>
+      </div>
 
       <ul class="feature-list">
         <li>Four modes: time, words, zen and sentence</li>
-        <li>Falls back from the REST API to the Action API to built-in sentences, so there’s always text</li>
+        <li>Falls back from the REST API to the Action API to built-in sentences, so there's always text</li>
         <li>Live WPM and accuracy, with a WPM graph drawn on canvas</li>
         <li>A heatmap of the letters you miss most</li>
         <li>On-screen keyboards, with all 52 Sindhi letters on the phone layout</li>
@@ -200,7 +215,7 @@
 
       <div class="folder-foot">
         <ul class="chips" aria-label="Tech"><li>JavaScript</li><li>Vite</li><li>Canvas</li><li>MIT</li></ul>
-        <a class="btn btn--paper btn--sm" href="https://github.com/mr-ans-2006/Sindhi-Typing-Master" rel="noopener" target="_blank">Source on GitHub</a>
+        <a class="btn btn--paper btn--sm" href="https://github.com/mr-ans-2006/Sindhi-Typing-Master" rel="noopener" target="_blank">Source on GitHub <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </article>
@@ -210,12 +225,12 @@
 
 <!-- ============ SKILLS ============ -->
 <section class="skills" id="skills" aria-labelledby="skills-h">
-  <h2 id="skills-h" class="section-h">Toolbox</h2>
-  <p class="skills-intro">Only what my code actually uses, plus what I’m learning.</p>
+  <h2 id="skills-h" class="sticky sticky--teal section-tag">toolbox</h2>
+  <p class="skills-intro">Only what my code actually uses, plus what I'm learning.</p>
 
   <div class="shelves">
     <div class="shelf reveal">
-      <h3 class="shelf-h">Languages</h3>
+      <h3 class="label">languages</h3>
       <ul class="stickers">
         <li class="stk stk--1">Python</li>
         <li class="stk stk--2">JavaScript</li>
@@ -225,7 +240,7 @@
     </div>
 
     <div class="shelf reveal">
-      <h3 class="shelf-h">Tools</h3>
+      <h3 class="label">tools</h3>
       <ul class="stickers">
         <li class="stk stk--5">Git</li>
         <li class="stk stk--6">Vite</li>
@@ -235,7 +250,7 @@
     </div>
 
     <div class="shelf reveal">
-      <h3 class="shelf-h">Under the hood</h3>
+      <h3 class="label">under the hood</h3>
       <ul class="stickers">
         <li class="stk stk--9">lexers &amp; parsers</li>
         <li class="stk stk--10">ASTs &amp; tree-walking</li>
@@ -246,12 +261,10 @@
     </div>
 
     <div class="shelf reveal">
-      <h3 class="shelf-h">Learning &amp; into</h3>
+      <h3 class="label">learning &amp; into</h3>
       <ul class="stickers">
         <li class="stk stk--14">Networking: Cisco labs</li>
-        <li class="stk stk--15">Switching</li>
-        <li class="stk stk--15">VLANs</li>
-        <li class="stk stk--15">Port security</li>
+        <li class="stk stk--15">switching · VLANs · port security</li>
         <li class="stk stk--16">Security</li>
         <li class="stk stk--17">Systems</li>
       </ul>
@@ -261,12 +274,13 @@
 
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact" aria-labelledby="contact-h">
-  <h2 class="section-h section-h--center" id="contact-h">Say salaam</h2>
+  <p class="label label--center">get in touch</p>
+  <h2 class="big-hi" id="contact-h">Say salaam</h2>
   <p class="contact-copy">Building something for Sindhi, want to talk interpreters, or have a security problem worth poking at? Email is the fastest way to reach me.</p>
   <ul class="links">
-    <li><a class="link-card link-card--mail" href="mailto:alinawaz.work.726666@gmail.com"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7"/></svg><span><b>Email</b><small class="email">alinawaz.work.726666@<wbr>gmail.com</small></span></a></li>
-    <li><a class="link-card link-card--li" href="https://www.linkedin.com/in/ali-nawaz-a39a93422" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><path fill="var(--card)" d="M6.2 9.5h2.6V18H6.2zM7.5 5.6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10.6 9.5h2.5v1.2c.4-.7 1.3-1.4 2.7-1.4 2.7 0 3.2 1.8 3.2 4.1V18h-2.6v-4c0-1 0-2.2-1.4-2.2s-1.6 1-1.6 2.1V18h-2.6z"/></svg><span><b>LinkedIn</b><small>in/ali-nawaz-a39a93422</small></span></a></li>
-    <li><a class="link-card link-card--gh" href="https://github.com/mr-ans-2006" rel="noopener" target="_blank"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span><b>GitHub</b><small>github.com/mr-ans-2006</small></span></a></li>
+    <li><a class="link-card link-card--mail" href="mailto:alinawaz.work.726666@gmail.com"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7"/></svg><span><b>Email</b><small>alinawaz.work.726666@gmail.com</small></span><span class="arrow" aria-hidden="true">→</span></a></li>
+    <li><a class="link-card link-card--li" href="https://www.linkedin.com/in/ali-nawaz-a39a93422" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><path fill="var(--card)" d="M6.2 9.5h2.6V18H6.2zM7.5 5.6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10.6 9.5h2.5v1.2c.4-.7 1.3-1.4 2.7-1.4 2.7 0 3.2 1.8 3.2 4.1V18h-2.6v-4c0-1 0-2.2-1.4-2.2s-1.6 1-1.6 2.1V18h-2.6z"/></svg><span><b>LinkedIn</b><small>in/ali-nawaz-a39a93422</small></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+    <li><a class="link-card link-card--gh" href="https://github.com/mr-ans-2006" rel="noopener" target="_blank"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span><b>GitHub</b><small>github.com/mr-ans-2006</small></span><span class="arrow" aria-hidden="true">↗</span></a></li>
   </ul>
 </section>
 
