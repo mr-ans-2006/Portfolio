@@ -2,7 +2,7 @@
 
 The personal portfolio of Ali Nawaz, a Computer Science student at SMIU in Karachi, originally from Islamkot, Tharparkar. It shows my two projects for the Sindhi language, [SindhiScript](https://github.com/mr-ans-2006/SindhiScript) and [Sindhi Typing Master](https://github.com/mr-ans-2006/Sindhi-Typing-Master).
 
-**Live:** https://ali-nawaz.sites.tab.bot
+**Live:** https://mr-ans-2006.github.io/Portfolio/
 
 ## Tech
 
