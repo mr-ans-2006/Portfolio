@@ -136,11 +136,6 @@ h2.sticky{font-weight:700}
 .name-row:nth-child(2) .ch:nth-child(1){animation-delay:.24s}.name-row:nth-child(2) .ch:nth-child(2){animation-delay:.29s}.name-row:nth-child(2) .ch:nth-child(3){animation-delay:.34s}.name-row:nth-child(2) .ch:nth-child(4){animation-delay:.39s}.name-row:nth-child(2) .ch:nth-child(5){animation-delay:.44s}
 @keyframes rise{from{transform:translateY(28%);opacity:0}to{transform:none;opacity:1}}
 .hero-pitch{font-size:19px;line-height:1.5;max-width:36ch;margin:0 0 24px}
-.hero .terminal-line{margin-bottom:28px}
-.terminal-line{font:500 14px/1.55 var(--mono);background:var(--term-bg);color:var(--term-text);border-radius:12px;padding:14px 16px;max-width:560px;box-shadow:var(--shadow);border:2px solid var(--line)}
-.terminal-line .prompt{color:#ff5c66}
-.terminal-line .out{display:block;color:var(--term-text)}
-.terminal-line{color:var(--term-dim)}
 .hero-from{color:var(--accent);transform:rotate(-1.5deg);transform-origin:left}
 .hero-from .arr{font-family:var(--mono);font-size:.8em}
 .nw{white-space:nowrap}
@@ -291,7 +286,6 @@ h2.sticky{font-weight:700}
   .hero-intro .hero-from{font-size:26px}
   .photo-mono{font-size:58px}.photo-mono [lang="sd"]{font-size:24px}
   .hero-pitch{font-size:21px}
-  .terminal-line{font-size:15px}
   .about-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;gap:60px}
   .facts{grid-template-columns:repeat(2,1fr)}
   .folder-body{padding:30px 32px}

@@ -42,19 +42,6 @@
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
-  // Type out the whoami answer once.
-  var typed = document.querySelector(".typed");
-  if (typed && !reduce) {
-    var full = typed.textContent;
-    typed.setAttribute("aria-label", full);
-    typed.textContent = "";
-    var i = 0;
-    setTimeout(function step() {
-      typed.textContent = full.slice(0, ++i);
-      if (i < full.length) setTimeout(step, 36);
-    }, 800);
-  }
-
   // The typing-test keyboard types "سنڌي ٻولي" on a loop while it is on screen.
   var kbd = document.querySelector(".kbd");
   if (kbd && !reduce) {
