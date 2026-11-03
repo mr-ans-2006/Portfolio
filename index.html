@@ -122,14 +122,55 @@
 <section class="work" id="work" aria-labelledby="work-h">
   <p class="label label--center">things I've built</p>
   <h2 class="outline" id="work-h">THE WORK</h2>
-  <p class="sub">Two real projects, both for Sindhi.</p>
+  <p class="sub">Three real projects: an Android app, and two for Sindhi.</p>
 
   <!-- Project 1 -->
-  <article class="folder folder--indigo reveal" aria-labelledby="p1-h">
-    <div class="folder-tab"><span>01</span><span>Python</span></div>
+  <article class="folder folder--red reveal" aria-labelledby="p1-h">
+    <div class="folder-tab"><span>01</span><span>Kotlin</span></div>
     <div class="folder-body">
       <div class="folder-head">
-        <h3 id="p1-h">SindhiScript <span class="sd" lang="sd" dir="rtl">سنڌي</span></h3>
+        <h3 id="p1-h">Yaad <span class="sd" lang="ur" dir="rtl">یاد</span></h3>
+        <p class="pitch">Save Now. Find Anytime. An offline-first, open-source Android app that sorts your screenshots for you and makes the text in them searchable. It reads each one with on-device OCR, then lets you search by meaning, not just exact words.</p>
+      </div>
+
+      <div class="shots">
+        <figure><img src="img/yaad-results.jpg" width="480" height="1067" loading="lazy" decoding="async" alt="Yaad search results for &quot;tools&quot;, with tag filters and screenshot cards"><figcaption>search</figcaption></figure>
+        <figure><img src="img/yaad-memory.jpg" width="480" height="1067" loading="lazy" decoding="async" alt="A saved screenshot in Yaad with its key line and auto-picked tags"><figcaption>key line</figcaption></figure>
+        <figure><img src="img/yaad-folders.jpg" width="480" height="1067" loading="lazy" decoding="async" alt="Yaad folders: All, Code, Tools, Places and more, sorted by auto-tags"><figcaption>folders</figcaption></figure>
+      </div>
+
+      <ol class="pipeline" aria-label="How Yaad works">
+        <li><b>Detect</b><small>Notices new screenshots and imports them in the background</small></li>
+        <li><b>Read</b><small>On-device OCR with ML Kit pulls out the text</small></li>
+        <li><b>Understand</b><small>A MiniLM model on ONNX Runtime turns the text into meaning</small></li>
+        <li><b>Find</b><small>Search by meaning or by exact word, ranked on the phone</small></li>
+      </ol>
+
+      <ul class="feature-list">
+        <li>Auto-tagged folders: Code, Tools, Places, Study, Hacks, Shopping, Quotes, Chats</li>
+        <li>A key line picked out for every screenshot</li>
+        <li>No internet permission at all, so the app can’t send anything off your phone</li>
+        <li>Built with Jetpack Compose, Room and WorkManager</li>
+        <li>76 unit tests</li>
+        <li>Free APK for Android 8+ (arm64)</li>
+      </ul>
+
+      <div class="folder-foot">
+        <ul class="chips" aria-label="Tech"><li>Kotlin</li><li>Compose</li><li>On-device ML</li><li>MIT</li></ul>
+        <div class="foot-btns">
+          <a class="btn btn--paper btn--sm" href="https://github.com/mr-ans-2006/yaad/releases/latest" rel="noopener" target="_blank">Download APK <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--paper btn--sm" href="https://github.com/mr-ans-2006/yaad" rel="noopener" target="_blank">Source on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 2 -->
+  <article class="folder folder--indigo reveal" aria-labelledby="p2-h">
+    <div class="folder-tab"><span>02</span><span>Python</span></div>
+    <div class="folder-body">
+      <div class="folder-head">
+        <h3 id="p2-h">SindhiScript <span class="sd" lang="sd" dir="rtl">سنڌي</span></h3>
         <p class="pitch">A programming language written in Sindhi. It isn't a find-and-replace over Python: it has its own lexer, a hand-written recursive-descent parser and a tree-walking evaluator, and every keyword, operator and built-in is a Sindhi word.</p>
       </div>
 
@@ -188,12 +229,12 @@
     </dl>
   </div>
 
-  <!-- Project 2 -->
-  <article class="folder folder--red reveal" aria-labelledby="p2-h">
-    <div class="folder-tab"><span>02</span><span>JavaScript</span></div>
+  <!-- Project 3 -->
+  <article class="folder folder--red reveal" aria-labelledby="p3-h">
+    <div class="folder-tab"><span>03</span><span>JavaScript</span></div>
     <div class="folder-body">
       <div class="folder-head">
-        <h3 id="p2-h">Sindhi Typing Master <span class="sd" lang="sd" dir="rtl">ٽائپ ماسٽر</span></h3>
+        <h3 id="p3-h">Sindhi Typing Master <span class="sd" lang="sd" dir="rtl">ٽائپ ماسٽر</span></h3>
         <p class="pitch">A MonkeyType-style typing test for Sindhi. It pulls a random article from Sindhi Wikipedia, cleans it into sentences and times you on it, then shows your speed over time and a heatmap of the letters you keep missing.</p>
       </div>
 
